@@ -1,0 +1,111 @@
+- https://www.youtube.com/watch?v=u-4FiFpkPlQ
+- https://github.com/kirasystems/views - database changes to frontend
+
+
+* Contract Analytics
+
+How does anyone know the existing contracts/obligations of a company before buying/merger/acquisition?
+You need machine learning help for this to do.
+Kira is a powerful machine learning software that identifies, extracts, and analyzes text in your contracts and other documents.
+
+** Steps
+*** Import
+*** Conversion
+    Run OCRs
+*** Extraction
+*** Analysis
+** Founding Principles
+   - Do fewer things, bu do them well
+   - Have a superb user experience
+   - Reuse as much existing technology as possible
+   - Use the best technology, not the newest appeared on hacker news or reddit
+** Why Clojure
+   - Functional
+   - Immutable first
+   - JVM Interop
+   - Attracts good people who are life long learners (hiring filter)
+** Alternatives?
+   - Haskell (learning curve too steep, no interop)
+   - Scala (Not opinionated enough)
+   - Java (Problem Factory, Too much boilerplate)
+   - Python (too slow for data engineering)
+** Machine Learning
+   - Not many clojureML libraries
+   - Resuse existing Java and C/C++ based ML.  Even Python uses C/C++
+   - Good for feature processing
+** Initial stack
+   - Clojure
+   - Java, C++(OCR)
+   - Serialzation (EDN via Nippy)
+   - ClojureScript+React
+** Great things about Clojure
+   - Java Interop is superb. PDFBOX, CLearNLP, Liblinear
+   - Less code and interactive REPL really helps
+   - Polyglots
+   - People who learned clojure are
+     - Strong self-learners
+     - Care about good design
+     - Polyglots
+     - Passionate
+** Problems
+   - When hiring 10 or more?  not easy
+   - Remote applicants are common. But not easy with legalities
+   - Prepared to teach the Juniors.
+   - Clojurists prefer backend rather frontend 
+** Many ways to write the same thing
+   generally it is frowned upon
+   - Ring is good
+   - Compolure vs Reitit
+   - Leiningen, boot, shadow-cljs, tools.dep
+   - When to invent DSL juming the gun?
+   - Lots of debates 
+     - Time sink
+   - Resist urge to perfect
+     - boring is better
+   - Concise is not always best.  Please write longer code, 
+   - Readability is more important
+   - Om is out, Reframe is in.  Hoplon?
+   - Prismatic Schema vs clojure.spec
+   - Front end development in clojure(script) is non-standard
+** Memory overhead     
+   - Data processing is very intensive.  CLojure overhead shows up multipled
+   - C++ and Java memory pools are different.
+** Type system
+   - started with no types. Good fast
+   - then running into problems with no documentation
+   - Introduced clojure.spec incrementally.  prismatic schema is gone! Spec
+   - repl testing or bottom of the file tests in (comment ...) are bad
+** ClojureScript
+   - REPL is not that useful
+** Go is creeping in     
+** LOC
+   - 120K clojure
+   - 50K Go
+   - xx ClojureScript
+** Serialization across stacks   
+   - EDN, JSON, ProtocolBuffers
+   - JSON is useful to load in postgress
+   - Protobuff are portable, space efficient
+** Future Stack
+   - Clojre (web servers, processing services, Java Libs)
+   - ClojureScript (frontend, reaagent, sente)
+   - Serialization (JSON/PROBUFF)
+   - Go (core machine learning, data processing, command line tools)
+   - C++ for OCR as text processing is big part of contract analytics.
+** Future
+   - conciseness vs readability
+   - How to structure applications?  Too many ways. Use Luminus as starting point
+   - Macros, DSL or 
+** Clojure Community
+   - Stronger rallying around top libraries
+** Testing and Tooling
+   - REPL is not for testing. It is for exploration.
+   - Testing and linting should be first class
+** Data Interop
+   - EDN is not high performant
+** Technical Debt
+   - enevitable eventually.  No amount of tooling, language helps. You have to pay this.  It is sort of byproduct of profit genration. More developer, more code and more technical debt accumation.
+
+   - Static language compilers enforce narcisst design and it is good for big companies.
+** Clojure wrapping Java and GO wrapping C++.  But Clojure and GO cannot be compared
+
